@@ -1,0 +1,17 @@
+{
+  "events": [
+    {
+      "id": 1,
+      "name": "心理健康大使-同辈共振课程",
+      "venue_name": "启德双子汇18楼",
+      "latitude": 22.3324089,
+      "longitude": 114.1960005,
+      "date": "2026-04-19",
+      "is_active": true,
+      "created_at": "2026-04-13T06:01:08.486Z"
+    }
+  ],
+  "checkins": [],
+  "nextEventId": 2,
+  "nextCheckinId": 1
+}

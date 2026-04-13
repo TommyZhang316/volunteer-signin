@@ -1,0 +1,338 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #f0f4f8;
+  color: #1a202c;
+  min-height: 100vh;
+}
+
+/* ── Layout ── */
+.page {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.page-header h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1a202c;
+}
+
+.page-header p {
+  color: #718096;
+  margin-top: 6px;
+  font-size: 0.95rem;
+}
+
+/* ── Cards ── */
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 18px 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.04);
+  margin-bottom: 12px;
+}
+
+.card-clickable {
+  cursor: pointer;
+  transition: transform 0.12s, box-shadow 0.12s;
+}
+
+.card-clickable:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.card .meta {
+  font-size: 0.85rem;
+  color: #718096;
+  margin-top: 4px;
+}
+
+.card .badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 999px;
+  margin-top: 8px;
+}
+
+.badge-active { background: #d1fae5; color: #065f46; }
+.badge-inactive { background: #f3f4f6; color: #6b7280; }
+
+/* ── Forms ── */
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #4a5568;
+  margin-bottom: 6px;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="number"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #1a202c;
+  background: #fff;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.12);
+}
+
+.input-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+/* ── Buttons ── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+  padding: 11px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.15s, background 0.15s;
+  text-decoration: none;
+}
+
+.btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.btn-primary  { background: #3b82f6; color: #fff; }
+.btn-primary:hover:not(:disabled) { background: #2563eb; }
+
+.btn-success  { background: #10b981; color: #fff; }
+.btn-success:hover:not(:disabled) { background: #059669; }
+
+.btn-danger   { background: #ef4444; color: #fff; }
+.btn-danger:hover:not(:disabled)  { background: #dc2626; }
+
+.btn-secondary { background: #e2e8f0; color: #4a5568; }
+.btn-secondary:hover:not(:disabled) { background: #cbd5e0; }
+
+.btn-ghost {
+  background: none;
+  color: #3b82f6;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 6px 0;
+  width: auto;
+}
+
+.btn-sm { padding: 6px 12px; font-size: 0.8rem; width: auto; }
+
+.btn-group {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+/* ── Messages ── */
+.msg {
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  margin-bottom: 14px;
+  line-height: 1.4;
+}
+
+.msg-error   { background: #fee2e2; color: #991b1b; }
+.msg-success { background: #d1fae5; color: #065f46; }
+.msg-info    { background: #dbeafe; color: #1e40af; }
+.msg-warn    { background: #fef3c7; color: #92400e; }
+
+/* ── Success screen ── */
+.success-screen {
+  text-align: center;
+  padding: 48px 20px;
+}
+
+.success-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #10b981;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+  color: #fff;
+  margin: 0 auto 24px;
+}
+
+.success-screen h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.success-screen .volunteer-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #3b82f6;
+  margin-bottom: 4px;
+}
+
+.success-screen .event-name {
+  color: #718096;
+  font-size: 0.95rem;
+  margin-bottom: 32px;
+}
+
+/* ── Location note ── */
+.location-note {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #718096;
+  margin-top: 12px;
+}
+
+/* ── Admin layout ── */
+.admin-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.admin-header h1 {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.tab-bar {
+  display: flex;
+  gap: 2px;
+  background: #e2e8f0;
+  border-radius: 10px;
+  padding: 3px;
+  margin-bottom: 24px;
+}
+
+.tab {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  background: transparent;
+  color: #718096;
+  transition: background 0.15s, color 0.15s;
+}
+
+.tab.active {
+  background: #fff;
+  color: #1a202c;
+  font-weight: 600;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+/* ── Table ── */
+.table-wrap {
+  overflow-x: auto;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+th {
+  background: #f7fafc;
+  font-weight: 600;
+  color: #4a5568;
+  padding: 10px 14px;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+td {
+  padding: 10px 14px;
+  border-bottom: 1px solid #f0f4f8;
+  color: #2d3748;
+}
+
+tr:last-child td { border-bottom: none; }
+tr:hover td { background: #f7fafc; }
+
+/* ── Misc ── */
+.divider {
+  border: none;
+  border-top: 1px solid #e2e8f0;
+  margin: 20px 0;
+}
+
+.empty {
+  text-align: center;
+  color: #a0aec0;
+  padding: 40px 20px;
+  font-size: 0.95rem;
+}
+
+.spinner {
+  text-align: center;
+  color: #718096;
+  padding: 40px 20px;
+}
+
+.event-row-actions {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.count-pill {
+  font-size: 0.78rem;
+  font-weight: 600;
+  background: #ebf4ff;
+  color: #3b82f6;
+  padding: 2px 8px;
+  border-radius: 999px;
+}
