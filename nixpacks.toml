@@ -1,6 +1,7 @@
 [phases.install]
 cmds = [
   'npm install --prefix backend --omit=dev',
+  'rm -f frontend/package-lock.json',
   'npm install --prefix frontend'
 ]
 
