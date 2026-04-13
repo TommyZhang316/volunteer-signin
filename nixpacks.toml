@@ -1,7 +1,7 @@
 [phases.install]
 cmds = [
   'npm install --prefix backend --omit=dev',
-  'npm install --prefix frontend --include=dev'
+  'npm install --prefix frontend'
 ]
 
 [phases.build]
